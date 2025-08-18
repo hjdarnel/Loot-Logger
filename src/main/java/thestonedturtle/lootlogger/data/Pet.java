@@ -73,6 +73,7 @@ public enum Pet
 	HERBI(ItemID.HERBIBOARPET, "Herbiboar"),
 	HUBERTE(ItemID.HUEYPET, BossTab.HUEYCOATL.getName()),
 	YAMI(ItemID.YAMAPET, BossTab.YAMA.getName()),
+	DOMPET(ItemID.DOMPET, BossTab.DOOM.getName()),
 	// Pretty sure
 	PHOENIX(ItemID.PHOENIXPET, BossTab.WINTERTODT.getName()),
 	PET_PENANCE_QUEEN(ItemID.PENANCEPET, "Barbarian Assault"),
