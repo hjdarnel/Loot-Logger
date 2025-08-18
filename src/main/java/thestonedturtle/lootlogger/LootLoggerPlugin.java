@@ -306,7 +306,21 @@ public class LootLoggerPlugin extends Plugin
 			{
 				gotPet = false;
 				petTicks = 0;
-				drops.add(createLTItemEntry(p.getPetID(), 1));
+
+				// If the user is getting a `ServerNpcLoot` event then it may already include the pet data.
+				boolean hasPetInDrops = false;
+				for (final LTItemEntry entry : drops)
+				{
+					if (entry.getId() == p.getPetID())
+					{
+						hasPetInDrops = true;
+						break;
+					}
+				}
+
+				if (!hasPetInDrops) {
+					drops.add(createLTItemEntry(p.getPetID(), 1));
+				}
 			}
 		}
 
